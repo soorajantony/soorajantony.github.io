@@ -27,21 +27,22 @@
         .container {
             display: grid;
             grid-template-columns: minmax(220px, max-content) 1fr;
-            gap: 10px;
+            gap: 3px;
             max-width: 9in;
             margin: 0 auto;
             background: white;
-            padding: 15px;
+            padding: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        
+            
         .left-column {
             background: #2c3e50;
             color: white;
-            padding: 12px;
-            border-radius: 5px;
+            padding: 9px;
+            border-radius: 3px;
             width: fit-content;
             min-width: 220px;
+            max-width: 290px;
         }
         
         .right-column {
@@ -81,13 +82,13 @@
             font-size: 13px;
             font-weight: bold;
             margin: 12px 0 6px 0;
-            color: #34495e;
+            color: #34365e;
             border-bottom: 1px solid #bdc3c7;
             padding-bottom: 2px;
         }
         
         .left-column .section-title {
-            color: #ecf0f1;
+            color: #fac39b;
             border-bottom: 1px solid #34495e;
         }
         
@@ -111,20 +112,14 @@
         }
         
         .left-column li {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            position: relative;
-            padding-left: 0.6em;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
+            position: static;
+            padding-left: 0;
         }
-        
         .left-column li::before {
-            content: "\2022";
-            color: #fff;
-            font-weight: bold;
-            display: inline-block;
-            width: 0.6em;
-            margin-left: -0.6em;
+            content: none !important;
         }
         
         .job-header {
@@ -165,6 +160,19 @@
             font-size: 10px;
             margin-bottom: 12px;
             text-align: justify;
+            word-break: break-word;
+            overflow-wrap: anywhere;
+        }
+        
+        .introduction li {
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
+            padding-left: 0;
+        }
+        
+        .introduction li::before {
+            content: none !important;
         }
         
         .award-item, .cert-item {
@@ -204,6 +212,9 @@
                 box-shadow: none;
             }
         }
+        .right-column li {
+            font-size: 11.2px;
+        }
     </style>
 </head>
 <body>
@@ -216,47 +227,44 @@
                 <div>📧 soorajantony@gmail.com</div>
                 <div>💼 linkedin.com/in/sooraj-antony</div>
             </div>
-            
-            <div class="section-title">SKILLS</div>
+            <div class="section-title">INTRODUCTION</div>
+            <div class="introduction">
+                <ul>
+                    <li>AWS Certified Data Architect with 15+ years of experience designing and architecting cloud-native Big Data platforms at scale.</li>
+                    <li>Expert in migrating legacy on-premises systems to AWS and architecting automated, end-to-end data integration, transformation, warehousing, and reporting workflows for a high-impact, data-driven business solution.</li>
+                    <li>Currently leading the modernization of a decades-old audience panel and survey-processing system, transforming it into a scalable, cost-efficient, and resilient AI/LLM-driven platform.</li>
+                </ul>
+            </div>
+            <div class="section-title">SKILLS SUMMARY</div>
             
             <div class="skill-category">AWS Ecosystem</div>
             <ul>
-                <li>Compute: EMR, ECS, EC2, Lambda</li>
-                <li>Storage: S3, EBS</li>
-                <li>Orchestration: MWAA, Step Functions</li>
-                <li>Serverless: Glue, Athena, DynamoDB</li>
-                <li>Networking: VPC, Subnets, SGs</li>
+                <li>Data Lake & Lakehouse: Lake Formation, Glue Data Catalog, S3</li>
+                <li>Analytics & Querying: Redshift, Redshift Spectrum, Athena</li>
+                <li>Orchestration & Automation: AWS MWAA (Apache Airflow), Step Functions</li>
+                <li>Serverless Data Processing: Glue ETL, Lambda, Glue Crawlers, Data Brew</li>
+                <li>Compute: EMR (Hadoop, Spark, Hive), ECS/EKS, EC2</li>
+                <li>Storage & Databases: S3, DynamoDB, RDS, Redshift, EBS</li>
+                <li>Governance & Security: IAM, VPC, Security Groups, VPN</li>
+                <li>Monitoring & Optimization: CloudWatch, CloudTrail, Cost Explorer</li>
             </ul>
             
-            <div class="skill-category">SQL/Database</div>
+            <div class="skill-category">Technical Leadership</div>
             <ul>
-                <li>Netezza, Postgres, Redshift, DynamoDB</li>
-                <li>OLAP using Analytical Functions</li>
-                <li>Performance Tuning</li>
+                <li>Architecture Review Board (ARB) & Design Review Facilitation</li>
+                <li>Solution Architecture & Statement of Work (SOW)</li>
+                <li>Stakeholder Communication & Technical Strategy</li>
+                <li>Multi-team Coordination & Dependency Management</li>
+                <li>Mentoring & Architectural Standards Definition</li>
             </ul>
             
-            <div class="skill-category">Big Data Processing</div>
+            <div class="skill-category">Platforms & Technologies</div>
             <ul>
-                <li>Hive, PySpark, Pig with Tez/MR</li>
-                <li>YARN and HDFS</li>
-                <li>Sqoop and Distcp</li>
-            </ul>
-            
-            <div class="skill-category">Scripting Languages</div>
-            <ul>
-                <li>Python, Shell</li>
-            </ul>
-            
-            <div class="skill-category">ETL/Data Pipelines</div>
-            <ul>
-                <li>Airflow, Glue, NiFi, Step Functions</li>
-            </ul>
-            
-            <div class="skill-category">DevOps Corner</div>
-            <ul>
-                <li>Version Control - GitLab</li>
-                <li>CI/CD: Git Actions, Jenkins, CodePipeline</li>
-                <li>Containers: Docker, Kubernetes, ECR</li>
+                <li>Big Data Processing: PySpark, Hive, Pig with Tez/MR, YARN, HDFS</li>
+                <li>Databases: Netezza, Postgres, Redshift, DynamoDB, Oracle</li>
+                <li>Infrastructure as Code: Terraform, CloudFormation</li>
+                <li>Scripting Languages: Python, Shell</li>
+                <li>Version Control & CI/CD: GitLab, GitHub, Jenkins</li>
             </ul>
             
             <div class="section-title">CERTIFICATIONS</div>
@@ -264,11 +272,6 @@
             <div class="cert-item">• AWS Certified Data Analytics Specialist</div>
             <div class="cert-item">• Oracle Certified SQL Expert</div>
             <div class="cert-item">• Microsoft Certified Azure Fundamentals</div>
-            
-            <div class="section-title">AWARDS</div>
-            <div class="award-item">• Diamond of Excellence Award, 2011</div>
-            <div class="award-item">• Platinum Awards (2020, 2021)</div>
-            <div class="award-item">• Various "On the Spot" (Gold) Awards</div>
             
             <div class="section-title">EDUCATION</div>
             <div class="education-item">
@@ -281,15 +284,12 @@
         <div class="right-column">
             <div class="header">
                 <div class="name">Sooraj Antony</div>
-                <div class="title">Big Data Architect</div>
+                <div class="title">Data Architecture | Big Data Platforms | AWS Cloud Solutions</div>
             </div>
             
-            <div class="section-title">INTRODUCTION</div>
-            <div class="introduction">
-                A versatile Data Engineer/Architect with 15 years of total experience designing, building and maintaining cloud-native Big Data platforms. Expert in migrating legacy on-prem systems to AWS, architecting and automating end-to-end data integration, transformation, warehousing, and reporting workflows underpinning a top-selling Attribution product. Currently leading the modernization of a decades-old audience panel and survey-processing solution—transforming it into a scalable, cost-efficient and resilient AI/LLM-driven platform.
-            </div>
+
             
-            <div class="section-title">WORK EXPERIENCE</div>
+        <div class="section-title">PROFESSIONAL EXPERIENCE</div>
             
             <div class="job-header">
                 <div class="job-title">Data Architect/Manager, Technology</div>
@@ -297,39 +297,40 @@
                 <div class="date">Jan 2024 - present</div>
             </div>
             <ul class="job-description">
-                <li>Architected end-to-end survey data processing pipelines with optimized data models intended for LLM integration, modernizing legacy systems and eliminating manual processes to reduce operational costs.</li>
-                <li>Lead and mentor a team of data engineers, conducting code reviews, managing task allocation through Kanban methodology, and ensuring delivery excellence.</li>
-                <li>Collaborate with stakeholders to gather requirements, create technical documentation, and translate business needs into scalable engineering solutions and development roadmaps.</li>
-                <li>Hands-on development of AWS MWAA Airflow pipelines, PySpark/SQL data transformations, FastAPI services, and automated CI/CD workflows using Git and Terraform.</li>
+                <li>Architected the modernization of end-to-end survey data processing pipelines, reducing manual processing time by 75% and enabling real-time RAG based LLM integration for automated insights.</li>
+                <li>Hands-on development of AWS MWAA Airflow pipelines, PySpark/SQL data transformations, FastAPI services, and automated CI/CD pipelines using Gitlab coupled with Infrastructure as Code tool Terraform.</li>
+                <li>Revamped a data processing workflow by making it S3 event-driven and utilizing AWS Glue ETL for transformations, resulting in substantial cost savings, greater durability, and improved maintainability with end-to-end S3 integration.</li>
+                <li>Lead and mentored a team of data engineers, conducting code reviews, managing task allocation through Kanban methodology, which improved team velocity by 40% thereby ensuring delivery excellence.</li>
+                <li>Collaborated with cross-functional teams including data scientists, analysts, and product managers to gather requirements, create technical documentation, and translate business needs into scalable solutions and development roadmaps.</li>
+                <li>Served as AWS and Big Data consultant, resolving critical architectural challenges in data pipeline design and implementing DataOps best practices that reduced infrastructure costs by 30%.</li>
             </ul>
             <div class="job-header">
-                <div class="job-title">Big Data Engineer/Associate Manager, Technology</div>
+                <div class="job-title">Lead Data Engineer/Associate Manager, Technology</div>
                 <div class="company">Nielsen Media</div>
                 <div class="date">Jan 2022 - Dec 2023</div>
             </div>
             <ul class="job-description">
-                <li>Architected and developed the cloud-based infrastructure for the Incrementality product and mentored the development team through its full lifecycle.</li>
-                <li>Owned end-to-end data ingestion, processing, reporting pipelines, and codebases for the flagship True Attribution solution.</li>
+                <li>Designed and developed a serverless data lake architecture using Lambda, DynamoDB, S3,and Athena, enabling attribution analytics for Fortune 500 clients processing 3+billion daily ad records with minimal operational overhead and cost-effective scaling.</li>
+                <li>Optimized end-to-end data pipelines in Hive, Spark, and Pig on EMR for the flagship True Attribution solution, reducing execution time by 65% and boosting attribution accuracy through customized ETL enhancements and scalable architecture.</li>
                 <li>Translated stakeholder requirements into technical designs, delegated tasks to appropriate resources, and ensured code quality, reviews, and releases for the Envoy product.</li>
-                <li>Acted as an AWS and Big Data consultant, resolving solution, design, and architectural challenges for technical teams.</li>
+                <li>Developed a Python–PostgreSQL Rule Based Data Governance Framework enforcing comprehensive data standards across outbound feeds, reports, and UIs, reducing manual data validation time by 70%.</li>
             </ul>
             
             <div class="job-header">
-                <div class="job-title">Associate Technology Specialist</div>
+                <div class="job-title">Big Data Engineer/Associate Technology Specialist</div>
                 <div class="company">Nielsen Media</div>
-                <div class="date">Jan 2020 - Nov 2021</div>
+                <div class="date">Jan 2019 - Nov 2021</div>
             </div>
             <ul class="job-description">
-                <li>Spearheaded end-to-end Big Data solutions: gathered requirements, architected and developed scalable EMR/Hive/PySpark/Pig modules on Python, and built robust AWS S3–Lambda–DynamoDB ingestion pipelines.</li>
-                <li>Engineered performance and reliability enhancements: optimized ETL workflows to exceed SLA targets, tuned Hive and PySpark jobs to resolve data skew, cardinality, and memory issues, and migrated the in-house orchestrator to AWS Managed Airflow—boosting scalability and cutting on-premise costs.</li>
-                <li>Established enterprise-grade release quality: implemented GitLab CI/CD pipelines with unit testing, vulnerability scanning, and SonarCloud metrics to fortify deployment credibility and stability.</li>
-                <li>Designed and deployed a Python–PostgreSQL Data Validation Framework to enforce comprehensive data standards across outbound feeds, reports, and user interfaces.</li>
+                <li>Spearheaded end-to-end Big Data solutions by gathering requirements, architecting scalable modules using EMR, Hive, PySpark, Pig, and Python, and building robust AWS S3–Lambda–DynamoDB ingestion pipelines, enhancing data latency.</li>
+                <li>Engineered performance and reliability enhancements by optimizing ETL workflows to exceed SLA targets, tuning Hive and PySpark jobs to resolve data skew, cardinality, and memory issues, and migrating the in-house orchestrator to AWS Managed Airflow—boosting scalability and cutting on-premise costs..</li> 
+                <li>Established enterprise-grade release quality by implementing automated GitLab CI/CD pipelines featuring unit testing, vulnerability scanning, and SonarCloud metrics, enhancing deployment stability and security.</li>
             </ul>
             
             <div class="job-header">
                 <div class="job-title">Team Lead/Principal Software Engineer</div>
                 <div class="company">Visual IQ Inc. (A Nielsen Company)</div>
-                <div class="date">Jan 2016 - Dec 2019</div>
+                <div class="date">Jan 2014 - Dec 2018</div>
             </div>
             <ul class="job-description">
                 <li>Design and implementation of Cloud Migration, where Netezza based on-premise ecosystem was successfully replaced by data pipelines driven by in-house orchestrator powering EC2 compute running Hive on MR/Tez</li>
@@ -338,13 +339,12 @@
             </ul>
             
             <div class="job-header">
-                <div class="job-title">Senior Software Engineer</div>
+                <div class="job-title">Database Programmer/Software Engineer</div>
                 <div class="company">Visual IQ Inc. (A Nielsen Company)</div>
-                <div class="date">Mar 2010 - Dec 2015</div>
+                <div class="date">Mar 2010 - Dec 2013</div>
             </div>
             <ul class="job-description">
-                <li>Lead and own the deliverables of the team which provides meaningful marketing insights through cross channel measurements for all the clients in the designated region.</li>
-                <li>Design, plan and drive the migration of production databases from Oracle to a distributed Netezza which helped faster go to market and reduced cost</li>
+                <li>Migration of production databases from Oracle to a distributed Netezza which helped faster go to market and reduced cost</li>
                 <li>Manage the allotted client portfolios, be in sync with the clients, transform their raw data to meaningful business insights, utilising SQL/OLAP and data warehouse tools.</li>
                 <li>Maintain and Optimise ETL assets, primarily Oracle 10g databases and OLAP cubes</li>
             </ul>   
